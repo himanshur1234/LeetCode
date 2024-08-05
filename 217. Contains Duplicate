@@ -1,0 +1,13 @@
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        Arrays.sort(nums);
+        boolean f= false;
+        for(int i=nums.length-1;i>=1;i--){
+            if(nums[i]==nums[i-1]){
+                f=true;
+                break;
+            }
+        }
+        return f;
+    }
+}
